@@ -14,8 +14,12 @@
         android:layout_height="251dp"
         android:scaleType="centerCrop"
         android:src="@drawable/welcomeback_pic"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="56dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.154" />
 
     <Button
         android:id="@+id/myButton"
@@ -23,66 +27,107 @@
         android:layout_height="49dp"
         android:background="@drawable/Input"
         android:text="Next  >"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="571dp"
-
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.882" />
 
     <ImageView
+        android:id="@+id/welcomeback_text"
         android:layout_width="182dp"
         android:layout_height="29dp"
         android:src="@drawable/welcomeback_textt"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="189dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.297" />
 
     <ImageView
+        android:id="@+id/sign_in_text"
         android:layout_width="207dp"
         android:layout_height="17dp"
         android:src="@drawable/sign_in_text"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="230dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.355" />
 
     <ImageView
+        android:id="@+id/email_enter"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:src="@drawable/email_enter_pic"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="316dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 
     <ImageView
+        android:id="@+id/password_enter"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:src="@drawable/password_enter_pic"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="400dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625" />
 
     <ImageView
+        android:id="@+id/remember_me_text"
         android:layout_width="60dp"
         android:layout_height="10dp"
         android:src="@drawable/remember_me_text"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="464dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678" />
 
     <ImageView
+        android:id="@+id/rectangle"
         android:layout_width="12dp"
         android:layout_height="12dp"
         android:src="@drawable/rectangle6"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="464dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.677" />
 
     <ImageView
+        android:id="@+id/forget_pass_text"
         android:layout_width="75dp"
         android:layout_height="10dp"
         android:src="@drawable/forget_password_text"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="464dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678" />
 
     <ImageView
+        android:id="@+id/new_member"
         android:layout_width="192dp"
         android:layout_height="16dp"
         android:src="@drawable/new_member_text"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="631dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.931" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
