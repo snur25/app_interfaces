@@ -95,8 +95,8 @@
 
     <ImageView
         android:id="@+id/rectangle"
-        android:layout_width="12dp"
-        android:layout_height="12dp"
+        android:layout_width="9dp"
+        android:layout_height="25dp"
         android:src="@drawable/rectangle6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
