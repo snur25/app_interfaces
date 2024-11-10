@@ -13,20 +13,76 @@
         android:layout_width="321dp"
         android:layout_height="251dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/welcomepagepic"
+        android:src="@drawable/welcomeback_pic"
         tools:layout_editor_absoluteX="104dp"
         tools:layout_editor_absoluteY="56dp" />
 
     <Button
+        android:id="@+id/myButton"
         android:layout_width="236dp"
         android:layout_height="49dp"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="571dp"
-        android:id="@+id/myButton"
         android:background="@drawable/Input"
         android:text="Next  >"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="571dp"
 
         />
+
+    <ImageView
+        android:layout_width="182dp"
+        android:layout_height="29dp"
+        android:src="@drawable/welcomeback_textt"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="189dp" />
+
+    <ImageView
+        android:layout_width="207dp"
+        android:layout_height="17dp"
+        android:src="@drawable/sign_in_text"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="230dp" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:src="@drawable/email_enter_pic"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="316dp" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:src="@drawable/password_enter_pic"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="400dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="10dp"
+        android:src="@drawable/remember_me_text"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/rectangle6"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="10dp"
+        android:src="@drawable/forget_password_text"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+    <ImageView
+        android:layout_width="192dp"
+        android:layout_height="16dp"
+        android:src="@drawable/new_member_text"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="631dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
