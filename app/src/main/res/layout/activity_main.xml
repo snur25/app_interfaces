@@ -8,8 +8,8 @@
     android:background="@drawable/rounded_background"
     tools:context=".MainActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="363dp"
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
@@ -45,7 +45,15 @@
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="325dp"
-            android:draw="@drawable/rectangle5" />
+            android:background="@drawable/rectangle5"
+            android:hint="  Enter your mail" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="288dp"
+            android:layout_marginTop="338dp"
+            android:src="@drawable/mail" />
 
 
         <EditText
@@ -54,7 +62,16 @@
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="400dp"
+            android:background="@drawable/rectangle5"
+            android:hint="  Password"
             android:src="@drawable/password_enter_pic" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="288dp"
+            android:layout_marginTop="411dp"
+            android:src="@drawable/lock" />
 
         <ImageView
             android:id="@+id/remember_me_text"
@@ -77,7 +94,7 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="653dp"
+            android:layout_marginTop="633dp"
             android:background="@drawable/Input"
             android:text="Next  >" />
 
@@ -89,13 +106,13 @@
             android:layout_marginTop="467dp"
             android:src="@drawable/forget_password_text" />
 
-        <ImageView
+        <Button
             android:id="@+id/new_member"
             android:layout_width="192dp"
             android:layout_height="16dp"
             android:layout_marginLeft="73dp"
-            android:layout_marginTop="726dp"
-            android:src="@drawable/new_member_text" />
+            android:layout_marginTop="693dp"
+            android:background="@drawable/new_member_text" />
 
     </FrameLayout>
 
