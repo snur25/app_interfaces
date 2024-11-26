@@ -2,32 +2,26 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="360dp"
+    android:id="@+id/register"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rounded_background"
     tools:context=".MainActivity">
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
-
 
         <ImageView
             android:id="@+id/BackgroundImageView"
             android:layout_width="321dp"
             android:layout_height="251dp"
-            android:layout_marginLeft="52dp"
+            android:layout_marginStart="82dp"
             android:layout_marginTop="42dp"
+            android:contentDescription="background"
             android:src="@drawable/welcomeback_pic" />
 
         <ImageView
             android:id="@+id/welcomeback_text"
             android:layout_width="182dp"
+            android:contentDescription="background"
             android:layout_height="29dp"
-            android:layout_marginLeft="80dp"
+            android:layout_marginStart="110dp"
             android:layout_marginTop="180dp"
             android:src="@drawable/welcomeback_textt" />
 
@@ -35,86 +29,90 @@
             android:id="@+id/sign_in_text"
             android:layout_width="207dp"
             android:layout_height="17dp"
-            android:layout_marginLeft="78dp"
+            android:layout_marginStart="108dp"
+            android:contentDescription="text "
             android:layout_marginTop="213dp"
             android:src="@drawable/sign_in_text" />
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_enter"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="325dp"
             android:background="@drawable/rectangle5"
-            android:hint="  Enter your mail" />
+            android:hint="  Enter your mail">
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginLeft="288dp"
-            android:layout_marginTop="338dp"
-            android:src="@drawable/mail" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailtext"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="260dp"
+                    android:layout_marginTop="342dp"
+                    android:background="@drawable/mail" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password_enter"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="400dp"
             android:background="@drawable/rectangle5"
             android:hint="  Password"
-            android:src="@drawable/password_enter_pic" />
+            android:src="@drawable/password_enter_pic">
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginLeft="288dp"
-            android:layout_marginTop="411dp"
-            android:src="@drawable/lock" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordtext"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="260dp"
+                    android:layout_marginTop="411dp"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/lock" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
             android:id="@+id/remember_me_text"
             android:layout_width="60dp"
             android:layout_height="10dp"
-            android:layout_marginLeft="48dp"
+            android:layout_marginStart="78dp"
             android:layout_marginTop="467dp"
+            android:contentDescription="text"
             android:src="@drawable/remember_me_text" />
 
-        <ImageView
+        <CheckBox
             android:id="@+id/rectangle"
-            android:layout_width="9dp"
-            android:layout_height="25dp"
-            android:layout_marginLeft="31dp"
-            android:layout_marginTop="460dp"
-            android:src="@drawable/rectangle6" />
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/rectangle6"
+            android:layout_marginStart="61dp"
+            android:layout_marginTop="468dp" />
 
         <Button
             android:id="@+id/myButton"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="633dp"
-            android:background="@drawable/Input"
+            android:background="@drawable/button"
             android:text="Next  >" />
 
         <ImageView
             android:id="@+id/forget_pass_text"
             android:layout_width="75dp"
             android:layout_height="10dp"
-            android:layout_marginLeft="250dp"
+            android:layout_marginStart="285dp"
             android:layout_marginTop="467dp"
             android:src="@drawable/forget_password_text" />
 
         <Button
-            android:id="@+id/new_member"
+            android:id="@+id/newmember"
             android:layout_width="192dp"
             android:layout_height="16dp"
-            android:layout_marginLeft="73dp"
+            android:layout_marginStart="114dp"
             android:layout_marginTop="693dp"
             android:background="@drawable/new_member_text" />
 
-    </FrameLayout>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
