@@ -1,3 +1,19 @@
 <resources>
+    <!-- Application Name -->
     <string name="app_name">My Application11</string>
+
+    <!-- Content Descriptions for Accessibility -->
+    <string name="background_image">Background Image</string>
+    <string name="welcome_back_text">Welcome Back</string>
+    <string name="sign_in_text">Sign In Text</string>
+    <string name="remember_me_text">Remember Me</string>
+    <string name="forget_password_text">Forgot Password</string>
+
+    <!-- TextInput Layout Hints -->
+    <string name="hint_email">Enter your mail</string>
+    <string name="hint_password">Password</string>
+
+    <!-- Button Texts -->
+    <string name="button_next">Next ></string>
+    <string name="button_new_member">New Member</string>
 </resources>

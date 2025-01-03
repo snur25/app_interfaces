@@ -5,10 +5,11 @@ import org.junit.Assert.assertEquals
 
 class CredentialsManagerTest {
 
+    private val credentialsManager = CredentialsManager()
+
     // Test empty email
     @Test
     fun givenEmptyEmail_thenReturnFalse() {
-        val credentialsManager = CredentialsManager()
         val isEmailValid = credentialsManager.isEmailValid("")
         assertEquals(false, isEmailValid)
     }
@@ -16,15 +17,13 @@ class CredentialsManagerTest {
     // Test wrong email format
     @Test
     fun givenWrongEmailFormat_thenReturnFalse() {
-        val credentialsManager = CredentialsManager()
-        val isEmailValid = credentialsManager.isEmailValid("wrongemailormat")
+        val isEmailValid = credentialsManager.isEmailValid("wrongemailformat")
         assertEquals(false, isEmailValid)
     }
 
     // Test proper email
     @Test
     fun givenProperEmail_thenReturnTrue() {
-        val credentialsManager = CredentialsManager()
         val isEmailValid = credentialsManager.isEmailValid("test@te.st")
         assertEquals(true, isEmailValid)
     }
@@ -32,42 +31,49 @@ class CredentialsManagerTest {
     // Test empty password
     @Test
     fun givenEmptyPassword_thenReturnFalse() {
-        val credentialsManager = CredentialsManager()
         val isPasswordValid = credentialsManager.isPasswordValid("")
         assertEquals(false, isPasswordValid)
     }
 
-    // Test filled password
+    // Test valid password
     @Test
     fun givenValidPassword_thenReturnTrue() {
-        val credentialsManager = CredentialsManager()
         val isPasswordValid = credentialsManager.isPasswordValid("1234")
         assertEquals(true, isPasswordValid)
     }
 
+    // Test successful registration
     @Test
-    fun testValidEmail() {
-        val manager = CredentialsManager()
-        assertEquals(true, manager.isEmailValid("test@te.st"))
-        assertEquals(false, manager.isEmailValid("invalid-email"))
+    fun givenNewEmailAndPassword_thenRegisterSuccessfully() {
+        val result = credentialsManager.register("test@te.st", "password")
+        assertEquals(true, result.isSuccessful)
+        assertEquals(null, result.errorMessage)
     }
 
+    // Test duplicate email registration
     @Test
-    fun testValidPassword() {
-        val manager = CredentialsManager()
-        assertEquals(true, manager.isPasswordValid("1234"))
-        assertEquals(false, manager.isPasswordValid("123"))
+    fun givenDuplicateEmail_thenReturnError() {
+        credentialsManager.register("test@te.st", "password")
+        val result = credentialsManager.register("test@te.st", "newpassword")
+        assertEquals(false, result.isSuccessful)
+        assertEquals("Email already exists", result.errorMessage)
     }
 
+    // Test case-insensitive email registration
     @Test
-    fun testHardcodedCredentials() {
-        val email = "test@te.st"
-        val password = "1234"
+    fun givenDuplicateEmailInDifferentCase_thenReturnError() {
+        credentialsManager.register("TEST@te.st", "password")
+        val result = credentialsManager.register("test@te.st", "newpassword")
+        assertEquals(false, result.isSuccessful)
+        assertEquals("Email already exists", result.errorMessage)
+    }
 
-        val manager = CredentialsManager()
-        val isEmailValid = manager.isEmailValid(email)
-        val isPasswordValid = manager.isPasswordValid(password)
-
-        assertEquals(true, isPasswordValid && isEmailValid)
+    // Test valid credentials after registration
+    @Test
+    fun givenValidEmailAndPasswordAfterRegistration_thenCredentialsAreValid() {
+        credentialsManager.register("test@te.st", "password")
+        val isEmailValid = credentialsManager.isEmailValid("test@te.st")
+        val isPasswordValid = credentialsManager.isPasswordValid("password")
+        assertEquals(true, isEmailValid && isPasswordValid)
     }
 }

@@ -1,118 +1,107 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/register"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RegisterFragment">
 
-        <ImageView
-            android:id="@+id/BackgroundImageView"
-            android:layout_width="321dp"
-            android:layout_height="251dp"
-            android:layout_marginStart="82dp"
-            android:layout_marginTop="42dp"
-            android:contentDescription="background"
-            android:src="@drawable/welcomeback_pic" />
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-        <ImageView
-            android:id="@+id/welcomeback_text"
-            android:layout_width="182dp"
-            android:contentDescription="background"
-            android:layout_height="29dp"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="180dp"
-            android:src="@drawable/welcomeback_textt" />
 
-        <ImageView
-            android:id="@+id/sign_in_text"
-            android:layout_width="207dp"
-            android:layout_height="17dp"
-            android:layout_marginStart="108dp"
-            android:contentDescription="text "
-            android:layout_marginTop="213dp"
-            android:src="@drawable/sign_in_text" />
+    <ImageView
+        android:id="@+id/BackgroundImageView"
+        android:layout_width="321dp"
+        android:layout_height="251dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="42dp"
+        android:contentDescription="@string/background_image"
+        android:src="@drawable/welcomeback_pic" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email_enter"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="325dp"
-            android:background="@drawable/rectangle5"
-            android:hint="  Enter your mail">
+    <ImageView
+        android:id="@+id/welcomeback_text"
+        android:layout_width="182dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="180dp"
+        android:contentDescription="@string/welcome_back_text"
+        android:src="@drawable/welcomeback_textt" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailtext"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="260dp"
-                    android:layout_marginTop="342dp"
-                    android:background="@drawable/mail" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <ImageView
+        android:id="@+id/sign_in_text"
+        android:layout_width="207dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="213dp"
+        android:contentDescription="@string/sign_in_text"
+        android:src="@drawable/sign_in_text" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password_enter"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="400dp"
-            android:background="@drawable/rectangle5"
-            android:hint="  Password"
-            android:src="@drawable/password_enter_pic">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_enter"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="285dp"
+        android:layout_marginLeft="45dp">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/passwordtext"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="260dp"
-                    android:layout_marginTop="411dp"
-                    android:inputType="textEmailAddress"
-                    android:background="@drawable/lock" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailtext"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/mail" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <ImageView
-            android:id="@+id/remember_me_text"
-            android:layout_width="60dp"
-            android:layout_height="10dp"
-            android:layout_marginStart="78dp"
-            android:layout_marginTop="467dp"
-            android:contentDescription="text"
-            android:src="@drawable/remember_me_text" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_enter"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="45dp"
+        android:hint="  Password">
 
-        <CheckBox
-            android:id="@+id/rectangle"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:background="@drawable/rectangle6"
-            android:layout_marginStart="61dp"
-            android:layout_marginTop="468dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordtext"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/lock" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/myButton"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="633dp"
-            android:background="@drawable/button"
-            android:text="Next  >" />
+    <CheckBox
+        android:id="@+id/rectangle"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:button="@drawable/rectangle6"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="427dp" />
 
-        <ImageView
-            android:id="@+id/forget_pass_text"
-            android:layout_width="75dp"
-            android:layout_height="10dp"
-            android:layout_marginStart="285dp"
-            android:layout_marginTop="467dp"
-            android:src="@drawable/forget_password_text" />
+    <ImageView
+        android:id="@+id/remember_me_text"
+        android:layout_width="60dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="430dp"
+        android:contentDescription="@string/remember_me_text"
+        android:src="@drawable/remember_me_text" />
 
-        <Button
-            android:id="@+id/newmember"
-            android:layout_width="192dp"
-            android:layout_height="16dp"
-            android:layout_marginStart="114dp"
-            android:layout_marginTop="693dp"
-            android:background="@drawable/new_member_text" />
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="620dp"
+        android:background="@drawable/button"
+        android:text="@string/button_next" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/newmember"
+        android:layout_width="192dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="693dp"
+        android:background="@drawable/new_member_text"
+        android:text="@string/button_new_member" />
 
 </RelativeLayout>

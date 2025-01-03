@@ -13,18 +13,17 @@
         android:theme="@style/Theme.MyApplication11"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivityy"
             android:exported="true" />
-
-        <activity
-            android:name=".emptyact"
-            android:exported="true"/>
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -1,139 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivityy">
+    tools:context=".LoginFragment">
 
-        <ImageView
-            android:id="@+id/BackgroundImageView"
-            android:layout_width="321dp"
-            android:layout_height="251dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginStart="92dp"
-            android:src="@drawable/welcomeback_pic"
-            android:contentDescription="background"/>
+    <ImageView
+        android:id="@+id/BackgroundImageView"
+        android:layout_width="321dp"
+        android:layout_height="251dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/welcomeback_pic"
+        android:contentDescription="background" />
 
-        <ImageView
-            android:id="@+id/get_started_text"
-            android:layout_width="210dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="159dp"
-            android:layout_marginStart="97dp"
-            android:src="@drawable/get_started_text" />
+    <ImageView
+        android:id="@+id/get_started_text"
+        android:layout_width="210dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="159dp"
+        android:src="@drawable/get_started_text" />
 
-        <ImageView
-            android:id="@+id/make_free_acc_text"
-            android:layout_width="183dp"
-            android:layout_height="17dp"
-            android:layout_marginTop="203dp"
-            android:layout_marginStart="108dp"
-            android:src="@drawable/free_acc_text" />
+    <ImageView
+        android:id="@+id/make_free_acc_text"
+        android:layout_width="183dp"
+        android:layout_height="17dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="203dp"
+        android:src="@drawable/free_acc_text" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/full_name"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="256dp"
-            android:hint="  Full name"
-            android:layout_marginStart="60dp"
-            android:background="@drawable/rectangle5" >
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/full_name"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="256dp"
+        android:hint="  Full name">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fullnametext"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="255dp"
-                android:layout_marginTop="269dp"
-                android:background="@drawable/user" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fullnametext"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/user" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/valid_mail"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="325dp"
-            android:background="@drawable/rectangle5"
-            android:hint="  Valid email">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/valid_mail"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="325dp"
+        android:hint="  Valid email">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/mailtext2"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="255dp"
-                android:layout_marginTop="338dp"
-                android:background="@drawable/mail" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mailtext2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/mail" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/phone_no"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="394dp"
-            android:background="@drawable/rectangle5"
-            android:hint="  Phone number">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/strong_password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="390dp"
+        android:hint="  Full name">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="255dp"
-                android:layout_marginTop="411dp"
-                android:background="@drawable/smartphone" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/strongpasstext"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/lock" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/strong_password"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="463dp"
-            android:layout_marginStart="60dp"
-            android:background="@drawable/rectangle5"
-            android:hint="  Strong password">
+    <CheckBox
+        android:id="@+id/rectangle2"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="530dp"
+        android:background="@drawable/rectangle6" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:id="@+id/strongpasstext"
-                android:layout_marginStart="255dp"
-                android:layout_marginTop="474dp"
-                android:background="@drawable/lock" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <CheckBox
-            android:id="@+id/rectangle2"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:layout_marginStart="74dp"
-            android:layout_marginTop="530dp"
-            android:background="@drawable/rectangle6" />
-
-        <ImageView
-            android:id="@+id/terms_box_text"
-            android:layout_width="241dp"
-            android:layout_height="10dp"
-            android:layout_marginTop="532dp"
-            android:layout_marginStart="90dp"
-            android:src="@drawable/checking_the_box_text" />
-
-        <Button
-            android:id="@+id/myButton2"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:background="@drawable/button"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="638dp"
-            android:text="Next  >" />
-
-        <ImageView
-            android:id="@+id/memberlogin"
-            android:layout_width="176dp"
-            android:layout_height="12dp"
-            android:layout_marginTop="703dp"
-            android:layout_marginStart="113dp"
-            android:background="@drawable/a_member_log_in_text" />
+    <ImageView
+        android:id="@+id/terms_box_text"
+        android:layout_width="241dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="532dp"
+        android:layout_marginStart="90dp"
+        android:background="@drawable/checking_the_box_text" />
 
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/myButton2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="638dp"
+        android:background="@drawable/button"
+        android:text="Next  >" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/memberlogin"
+        android:layout_width="176dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="703dp"
+        android:layout_marginStart="113dp"
+        android:background="@drawable/a_member_log_in_text" />
+
+</FrameLayout>
