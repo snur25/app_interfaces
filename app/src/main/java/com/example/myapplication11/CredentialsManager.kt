@@ -20,6 +20,19 @@ class CredentialsManager {
         accounts[normalizedEmail] = password
         return RegistrationResult(true, null)
     }
+
+    fun login(email: String, password: String): LoginResult {
+        val normalizedEmail = email.lowercase()
+        val storedPassword = accounts[normalizedEmail]
+        return if (storedPassword == null) {
+            LoginResult(false, "Email not registered")
+        } else if (storedPassword != password) {
+            LoginResult(false, "Incorrect password")
+        } else {
+            LoginResult(true, null)
+        }
+    }
 }
 
 data class RegistrationResult(val isSuccessful: Boolean, val errorMessage: String?)
+data class LoginResult(val isSuccessful: Boolean, val errorMessage: String?)
